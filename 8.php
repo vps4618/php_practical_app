@@ -16,7 +16,9 @@
 	
 	
 	<?php  
-
+        $value = 'Vishwa Praveen';
+        $encrypted_text = crypt($value,'$2a$07$usesomesillystringforsalt$');
+        echo $encrypted_text;
 	/*  Step 1 -Make a variable with some text as value
 
 		Step 2 - Use crypt() function to encrypt it
