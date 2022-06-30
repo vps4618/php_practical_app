@@ -11,7 +11,23 @@
 
 <article class="main-content col-xs-8">
 
-	
+	<?php
+    class Dog{
+        var $eye_color = 'brown eye color';
+        var  $nose = 'wide nose';
+        var $fur_color = 'white fur color';
+        
+        function ShowAll(){
+            echo $this->eye_color.'<br>';
+            echo $this->nose.'<br>';
+            echo $this->fur_color;
+        }
+    }
+    
+    $pitbull = new Dog();
+    $pitbull->ShowAll();
+    
+    ?>
 	<?php  
 
 	/*  Step 1: Use the Make a class called Dog

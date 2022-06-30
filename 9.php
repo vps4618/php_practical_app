@@ -14,8 +14,28 @@
 
 
 			<article class="main-content col-xs-8">
-			
-		
+    
+    <?php
+    //step 1
+                if(isset($_GET['school'])){
+        echo $_GET['school'];        
+                }
+    
+                //step 2
+                $expiration = time()+(60*60*24*7);
+                setcookie('TheName','This is the value',$expiration);
+                if(isset($_COOKIE['TheName'])){
+                echo '<br>'.$_COOKIE['TheName'];
+                }
+                
+                //step 3
+                session_start();
+                $_SESSION['message'] = 'hi brother !';
+                if(isset($_SESSION['message'])){
+                    echo '<br>'.$_SESSION['message'];
+                }
+                ?>            
+		<br><a href="9.php?school=taxila+central+college">Click me</a>
 	
 	<?php 
 
